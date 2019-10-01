@@ -1,8 +1,10 @@
 const chai = require('chai');
 const expect = chai.expect;
+
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
+const Turn = require('../src/Turn');
 
 describe('Round', () => {
   let card, card2, card3;
@@ -18,14 +20,14 @@ describe('Round', () => {
   });
 
   it('should have a deck of cards', () => {
-    expect(round.deck).to.eql(deck.cards)
+    expect(round.deck).to.eql(deck.cards);
   });
 
   it('should be able to get the current card', () => {
-    expect(round.getCurrentCard()).to.equal(card)
+    expect(round.getCurrentCard()).to.equal(card);
   });
 
-  it('should count each turn', function() {
+  it('should count each turn', () => {
     round.takeTurn();
     expect(round.turns).to.equal(1);
   });
@@ -38,11 +40,19 @@ describe('Round', () => {
     expect(round.getCurrentCard()).to.eql(card3);
   });
 
+  it('should store all the incorrect guesses', () => {
+    turn = new Turn('object', card);
+    expect(round.incorrectGuesses).to.eql([]);
+    round.takeTurn('object')
+    expect(round.incorrectGuesses).to.eql([2]);
+  });
 
+  it('should calculate the percentage of correct guesses', () => {
+    round.takeTurn('array');
+    expect(round.calculatePercentCorrect()).to.equal(100);
+    round.takeTurn('accessor method');
+    expect(round.calculatePercentCorrect()).to.equal(50);
+  });
 
-
-
-
-
-})
+});
 
