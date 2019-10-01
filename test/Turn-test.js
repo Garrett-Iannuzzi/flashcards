@@ -41,11 +41,11 @@ describe('Turn', () => {
     expect(turn.evaluateGuess()).to.equal(false)
   });
 
-  it('should evaluate the user guess if true', () => {
+  it('should give feedback if true', () => {
     expect(turn.giveFeedback()).to.equal('Correct!')
   });
 
-  it('should evaluate the user guess if false', () => {
+  it('should give feedback if false', () => {
     turn = new Turn('array', card)
     expect(turn.giveFeedback()).to.equal('Incorrect!')
   });
