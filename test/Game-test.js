@@ -4,9 +4,10 @@ const expect = chai.expect;
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 const Game = require('../src/Game');
+const Card = require('../src/Card');
 
 describe('Game', () => {
-  let round;
+  let card, card2, card3;
   let deck;
   let game;
 
@@ -17,12 +18,19 @@ describe('Game', () => {
     deck = new Deck([card, card2, card3]);
     round = new Round(deck);
     game = new Game();
+  });
 
+  it('should create a new game', () => {
+    expect(Game).to.be.a('function')
+  });
 
-  })
+  // it('should count how many rounds', () => {
+  //   expect(game.roundCounter).to.equal(0);
+  //   game.startGame();
+  //   expect(game.roundCounter).to.equal(1);
+  // });
 
+  // it('should be able start the game', () => {
 
-
-
-
-})
+  // });
+});
