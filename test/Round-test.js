@@ -23,7 +23,22 @@ describe('Round', () => {
 
   it('should be able to get the current card', () => {
     expect(round.getCurrentCard()).to.equal(card)
-  })
+  });
+
+  it('should count each turn', function() {
+    round.takeTurn();
+    expect(round.turns).to.equal(1);
+  });
+  
+  it('should create a new new turn after each guess', () => {
+    expect(round.getCurrentCard()).to.eql(card);
+    round.takeTurn();
+    expect(round.getCurrentCard()).to.eql(card2);
+    round.takeTurn();
+    expect(round.getCurrentCard()).to.eql(card3);
+  });
+
+
 
 
 
