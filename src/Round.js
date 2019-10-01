@@ -8,22 +8,25 @@ class Round {
   }
 
   getCurrentCard() {
-    return this.deck[this.turns]
+    return this.deck[this.turns];
   }
 
   takeTurn(guess) {
-    const currentCard = this.getCurrentCard()
-    let newTurn = new Turn(guess, currentCard)
-    // newTurn.giveFeedback()
+    const currentCard = this.getCurrentCard();
+    let newTurn = new Turn(guess, currentCard);
     if (newTurn.giveFeedback() === 'Incorrect!') {
       this.incorrectGuesses.push(this.deck[this.turns].id);
     }
-    this.turns++
+    this.turns++;
     return newTurn.giveFeedback();
   }
 
   calculatePercentCorrect() {
-    return (this.turns - this.incorrectGuesses.length) / this.turns * 100;
+    return Number(((this.turns - this.incorrectGuesses.length) / this.turns * 100).toFixed(0));
+  }
+
+  endRound() {
+    return console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 
 }

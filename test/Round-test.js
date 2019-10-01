@@ -43,7 +43,7 @@ describe('Round', () => {
   it('should store all the incorrect guesses', () => {
     turn = new Turn('object', card);
     expect(round.incorrectGuesses).to.eql([]);
-    round.takeTurn('object')
+    round.takeTurn('object');
     expect(round.incorrectGuesses).to.eql([2]);
   });
 
@@ -52,6 +52,14 @@ describe('Round', () => {
     expect(round.calculatePercentCorrect()).to.equal(100);
     round.takeTurn('accessor method');
     expect(round.calculatePercentCorrect()).to.equal(50);
+  });
+
+  it('should have a message when the round is over', () => {
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+    round.takeTurn('iteration method');
+    round.endRound()
+    expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${66}% of the questions correctly!`))
   });
 
 });
