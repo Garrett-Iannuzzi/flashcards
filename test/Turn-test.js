@@ -28,6 +28,12 @@ describe('Turn', () => {
     expect(turn.returnGuess()).to.equal('object')
   });
 
+  it('should return the whole card', () => {
+    expect(turn.returnCard()).to.equal(card)
+  });
+
+  
+
 
 })
 

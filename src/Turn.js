@@ -8,7 +8,7 @@ class Turn {
     return this.userGuess
   }
 
-  returncard() {
+  returnCard() {
     return this.card
   }
 
