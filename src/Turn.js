@@ -5,23 +5,27 @@ class Turn {
   }
 
   returnGuess() {
-    return this.userGuess
+    return this.userGuess;
   }
 
   returnCard() {
-    return this.card
+    return this.card;
   }
 
   evaluateGuess() {
     if (this.userGuess === this.card.correctAnswer) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 
   giveFeedback() {
-
+    if (this.userGuess === this.card.correctAnswer) {
+      return 'Correct!';
+    } else {
+      return 'Incorrect!';
+    }
   }
 
 }
