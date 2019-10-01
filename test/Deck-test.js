@@ -17,11 +17,11 @@ describe('Deck', () => {
   });
 
   it('should be a fucntion', () => {
-    expect(Deck).to.be.a('function')
+    expect(Deck).to.be.a('function');
   });
 
   it('should know how many cards are in the deck', () => {
-    expect(deck.getAmountOfCards()).to.eql(3)
-  })
+    expect(deck.getAmountOfCards()).to.eql(3);
+  });
 
 });
