@@ -1,6 +1,7 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
+
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
 
@@ -19,12 +20,21 @@ class Game {
   }
 
   startGame() {
+    this.roundCounter++
     const deck = new Deck(prototypeQuestions);
     const round = new Round(deck);
     this.printMessage(deck, round);
     this.printQuestion(round)
-    this.roundCounter++
   }
+
+  endGame() {
+    if (round.calculatePercentCorrect() < 90) {
+      console.log('Score above 90% end game!')
+      this.startGame()
+    }
+    round.endRound()
+  }
+
 }
 
 module.exports = Game;

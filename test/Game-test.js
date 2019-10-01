@@ -20,17 +20,14 @@ describe('Game', () => {
     game = new Game();
   });
 
-  it('should create a new game', () => {
+  it('should be a function', () => {
     expect(Game).to.be.a('function')
   });
 
-  // it('should count how many rounds', () => {
-  //   expect(game.roundCounter).to.equal(0);
-  //   game.startGame();
-  //   expect(game.roundCounter).to.equal(1);
-  // });
+  it('should count how many rounds', () => {
+    expect(game.roundCounter).to.equal(0);
+    game.startGame();
+    expect(game.roundCounter).to.equal(1);
+  });
 
-  // it('should be able start the game', () => {
-
-  // });
 });

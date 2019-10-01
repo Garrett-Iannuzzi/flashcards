@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+// const Game = require('../src/Game');
 
 const genList = (round) => {
   let card = round.getCurrentCard();
@@ -16,6 +17,9 @@ const genList = (round) => {
     choices: choices
   };
 }
+
+// const game = new Game() 
+// game.startGame()
 
 const getRound = (round) => {
   return Promise.resolve(round);
