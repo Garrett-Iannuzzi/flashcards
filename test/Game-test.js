@@ -20,7 +20,7 @@ describe('Game', () => {
     game = new Game();
   });
 
-  it('should create a new game', () => {
+  it('should be a function', () => {
     expect(Game).to.be.a('function')
   });
 
@@ -30,7 +30,13 @@ describe('Game', () => {
   //   expect(game.roundCounter).to.equal(1);
   // });
 
-  // it('should be able start the game', () => {
+  // it('should create a new deck', () => {
+  //   game.startGame();
+  //   expect(game.startGame()).to.equal(game)
+  // });
+
+  // it('should create a new round', () => {
 
   // });
+
 });
