@@ -1,14 +1,15 @@
 class Turn {
-  constructor() {
-
+  constructor(userGuess, card) {
+    this.userGuess = userGuess;
+    this.card = card; 
   }
 
   returnGuess() {
-
+    return this.userGuess
   }
 
   returncard() {
-
+    return this.card
   }
 
   evaluateGuess() {
@@ -18,6 +19,6 @@ class Turn {
   giveFeedback() {
 
   }
-  
+
 }
 module.exports = Turn;
