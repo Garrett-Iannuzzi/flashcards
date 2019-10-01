@@ -1,20 +1,30 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
+const Round = require('../src/Round');
+const Deck = require('../src/Deck');
 
 class Game {
-  constructor() {}
+  constructor() {
+    this.roundCounter = 0;
+  }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+      console.log(`Welcome to FlashCards! You are playing with ${deck.getAmountOfCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
       util.main(round);
   }
-}
 
-//test
+  startGame() {
+    const deck = new Deck(prototypeQuestions);
+    const round = new Round(deck);
+    this.printMessage(deck, round);
+    this.printQuestion(round)
+    this.roundCounter++
+  }
+}
 
 module.exports = Game;
