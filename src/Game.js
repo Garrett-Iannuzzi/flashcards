@@ -26,15 +26,6 @@ class Game {
     this.printMessage(deck, round);
     this.printQuestion(round)
   }
-
-  endGame() {
-    if (round.calculatePercentCorrect() < 90) {
-      console.log('Score above 90% end game!')
-      this.startGame()
-    }
-    round.endRound()
-  }
-
 }
 
 module.exports = Game;

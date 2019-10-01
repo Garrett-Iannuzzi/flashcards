@@ -24,10 +24,19 @@ describe('Game', () => {
     expect(Game).to.be.a('function')
   });
 
-  it('should count how many rounds', () => {
-    expect(game.roundCounter).to.equal(0);
-    game.startGame();
-    expect(game.roundCounter).to.equal(1);
-  });
+  // it('should count how many rounds', () => {
+  //   expect(game.roundCounter).to.equal(0);
+  //   game.startGame();
+  //   expect(game.roundCounter).to.equal(1);
+  // });
+
+  // it('should create a new deck', () => {
+  //   game.startGame();
+  //   expect(game.startGame()).to.equal(game)
+  // });
+
+  // it('should create a new round', () => {
+
+  // });
 
 });
