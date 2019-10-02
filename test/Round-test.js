@@ -23,6 +23,14 @@ describe('Round', () => {
     expect(round.deck).to.eql(deck.cards);
   });
 
+  it('should start at turn zero', () => {
+    expect(round.turns).to.equal(0);
+  });
+
+  it('should have a place to store incorrect guesses', () => {
+    expect(round.incorrectGuesses).to.eql([]);
+  });
+
   it('should be able to get the current card', () => {
     expect(round.getCurrentCard()).to.equal(card);
   });
@@ -61,6 +69,5 @@ describe('Round', () => {
     round.endRound()
     expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${66}% of the questions correctly!`));
   });
-
 });
 
