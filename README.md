@@ -20,4 +20,4 @@
 
 ### Game Play Example:
 
-![Screenshot](flashcards.GIF.gif)
+
