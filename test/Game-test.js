@@ -23,4 +23,8 @@ describe('Game', () => {
   it('should be a function', () => {
     expect(Game).to.be.a('function')
   });
+
+  it('should have a zero round count at start of the game', () => {
+    expect(game.roundCounter).to.equal(0);
+  });
 });
