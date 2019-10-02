@@ -10,7 +10,7 @@
 ### Tech Used:
   - Javascript 
   - Mocha/Chai testing suite
-  - JSON 
+  - JSON / node
 
 ### Wins and Challenges:
   - Wins:
