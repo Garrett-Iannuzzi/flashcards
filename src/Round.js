@@ -35,7 +35,7 @@ class Round {
       this.resetGame()
     } else {
       console.log('*** Over 90%, GREAT JOB! GAME OVER! ***');
-      util.endGame()
+      // util.endGame()
     }
   }
 
@@ -43,7 +43,7 @@ class Round {
     this.turns = 0;
     this.incorrectGuesses = []
     this.deck = prototypeQuestions;
-    util.main(this)
+    // util.main(this)
   }
 
 }
