@@ -4,9 +4,8 @@ class Deck {
   }
 
   getAmountOfCards() {
-    return this.cards.length
+    return this.cards.length;
   }
-
 }
 
 module.exports = Deck;

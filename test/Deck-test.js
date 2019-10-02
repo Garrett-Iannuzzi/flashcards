@@ -20,8 +20,11 @@ describe('Deck', () => {
     expect(Deck).to.be.a('function');
   });
 
+  it('should hold cards', () => {
+    expect(deck.cards).to.eql([card, card2, card3]);
+  });
+
   it('should know how many cards are in the deck', () => {
     expect(deck.getAmountOfCards()).to.eql(3);
   });
-
 });

@@ -35,15 +35,15 @@ class Round {
       this.resetGame()
     } else {
       console.log('*** Over 90%, GREAT JOB! GAME OVER! ***');
-      util.endGame()
+      // util.endGame()
     }
   }
 
   resetGame() {
     this.turns = 0;
     this.incorrectGuesses = []
-    this.deck = prototypeQuestions;
-    util.main(this)
+    this.deck = this.deck;
+    // util.main(this)
   }
 
 }
