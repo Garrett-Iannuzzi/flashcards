@@ -19,3 +19,5 @@
     - Set up a percentage requirement, if you do not score at least 90% the game will restart.
 
 ### Game Play Example:
+
+![GamePlay](gameplayGIF.gif)
