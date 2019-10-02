@@ -69,5 +69,12 @@ describe('Round', () => {
     round.endRound()
     expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${66}% of the questions correctly!`));
   });
+
+  it('should reset the game', () => {
+    round.resetGame();
+    expect(round.turns).to.equal(0);
+    expect(round.incorrectGuesses).to.eql([]);
+    expect(round.deck).to.equal(deck.cards);
+  });
 });
 
