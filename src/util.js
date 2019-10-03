@@ -43,7 +43,7 @@ async function main(round) {
 }
 
 const endGame = () => {
-  process.exit()
+  process.exit();
 }
 
 module.exports.main = main;

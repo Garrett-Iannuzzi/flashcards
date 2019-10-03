@@ -24,7 +24,7 @@ class Game {
     const deck = new Deck(prototypeQuestions);
     const round = new Round(deck);
     this.printMessage(deck, round);
-    this.printQuestion(round)
+    this.printQuestion(round);
   }
 }
 

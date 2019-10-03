@@ -1,6 +1,4 @@
 const Turn = require('../src/Turn');
-const data = require('./data');
-const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
 class Round {
@@ -41,7 +39,7 @@ class Round {
 
   resetGame() {
     this.turns = 0;
-    this.incorrectGuesses = []
+    this.incorrectGuesses = [];
     this.deck = this.deck;
     util.main(this);
   }
