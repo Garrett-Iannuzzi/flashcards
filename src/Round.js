@@ -32,10 +32,10 @@ class Round {
     console.log(`*** Round over! *** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     if (this.calculatePercentCorrect() < 90) {
       console.log('*** Must score above 90% to end game! ***');
-      this.resetGame()
+      this.resetGame();
     } else {
       console.log('*** Over 90%, GREAT JOB! GAME OVER! ***');
-      // util.endGame()
+      util.endGame();
     }
   }
 
@@ -43,7 +43,7 @@ class Round {
     this.turns = 0;
     this.incorrectGuesses = []
     this.deck = this.deck;
-    // util.main(this)
+    util.main(this);
   }
 
 }

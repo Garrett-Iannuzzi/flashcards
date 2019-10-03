@@ -66,7 +66,7 @@ describe('Round', () => {
     round.takeTurn('array');
     round.takeTurn('mutator method');
     round.takeTurn('iteration method');
-    round.endRound()
+    round.endRound();
     expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${66}% of the questions correctly!`));
   });
 
